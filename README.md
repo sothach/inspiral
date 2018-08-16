@@ -10,7 +10,7 @@ out from the center point, and to calculate distances between cells in this grid
 ## App Requirements
 1. Fill a two-dimensional NxN grid with NxN numbers (N is odd and the numbers are monotone increasing). 
 2. Start in the middle/center  and walk counter-clockwise to the outside. The middle square starts with 1.
-3. Now given a location (one of the cell-values), calculate the Manhattan-Distance to the center.
+3. Now given a location (one of the cell-values), calculate the rectilinear distance to the center.
 4. How many steps are required to go from location 368078 to the center?
 
 ### Prerequisites & bulding the example
@@ -123,6 +123,7 @@ Run the test suite to verify correct behaviour.  From the command line:
 % sbt test
 ```
 ### Test Coverage Report
+[![Coverage Status](https://coveralls.io/repos/github/sothach/inspiral/badge.svg?branch=master)](https://coveralls.io/github/sothach/inspiral?branch=master)
 To measure test coverage, this app uses the 'scoverage' SBT plugin.
 To create the report, rom the command line:
 ```
