@@ -1,4 +1,5 @@
 # Scala Console Program
+[![Coverage Status](https://coveralls.io/repos/github/sothach/inspiral/badge.svg?branch=master)](https://coveralls.io/github/sothach/inspiral?branch=master)
 ## Use Scala to build an interactive shell application
   
 This project is an example of using Scala to create an interactive command-line application.
@@ -123,7 +124,6 @@ Run the test suite to verify correct behaviour.  From the command line:
 % sbt test
 ```
 ### Test Coverage Report
-[![Coverage Status](https://coveralls.io/repos/github/sothach/inspiral/badge.svg?branch=master)](https://coveralls.io/github/sothach/inspiral?branch=master)
 To measure test coverage, this app uses the 'scoverage' SBT plugin.
 To create the report, rom the command line:
 ```
