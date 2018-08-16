@@ -23,8 +23,8 @@ class ModelSpec extends FlatSpec with Matchers {
 
   "Point distance" should "be calculated correctly" in {
     val Bounds(lower, upper) = Bounds(Point(1,1), Point(3,3))
-    lower.distance(upper) shouldBe 4
-    lower.distance(lower) shouldBe 0
+    lower.rectilinearDistance(upper) shouldBe 4
+    lower.rectilinearDistance(lower) shouldBe 0
   }
 
   "Point unapply" should "work" in {

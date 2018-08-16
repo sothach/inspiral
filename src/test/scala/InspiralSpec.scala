@@ -27,7 +27,7 @@ class InspiralSpec extends FlatSpec with Matchers {
     "have a distance of 31 between it and the cell 1" in {
     val subject = new GridBuilder(607,dim => new SpiralTurtle(dim))
     val origin = subject.locationOf(1)
-    origin.distance(subject.locationOf(368078)) shouldBe 371
+    origin.rectilinearDistance(subject.locationOf(368078)) shouldBe 371
   }
 
   "if the distance between, it" should "fail" in {

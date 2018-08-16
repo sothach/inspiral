@@ -53,7 +53,7 @@ case class DisplayHelp(parent: InputState) extends State {
   }
 }
 
-case class InputDimension(console: ConsoleInOut) extends InputState {
+case class NeedDimension(console: ConsoleInOut) extends InputState {
   def isValid (n: String) = isNumberInRange(n).exists(_ % 2 != 0)
   val range = 1 to 999
   val prompt = s"enter N (odd) dimension within $range: "
@@ -83,12 +83,12 @@ case class MeasureDistance(console: ConsoleInOut, grid: GridBuilder) extends Inp
   def next(value: String): State = {
     value match {
       case v if v == restart =>
-        InputDimension(console)
+        NeedDimension(console)
       case v if v == showGrid =>
         DisplayGrid(this)
       case n if isValid(n) =>
         val cell = grid.locationOf(n.toInt)
-        val distance = grid.origin.distance(cell)
+        val distance = grid.origin.rectilinearDistance(cell)
         console.println(s"1 @ ${grid.origin} -> $n @ $cell distance = $distance")
         this
       case error =>
@@ -107,7 +107,7 @@ class InspiralRepl(console: ConsoleInOut) {
       case state => inputLoop(state.action())
     }
 
-  def run() = inputLoop(InputDimension(console))
+  def run() = inputLoop(NeedDimension(console))
 }
 
 object StdInspiralRepl extends InspiralRepl(new StdInputOutput) {
