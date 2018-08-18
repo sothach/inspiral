@@ -53,7 +53,7 @@ To make the code more readable, a handful of domain classes were created, repres
 some of the prime concepts in the problem domain, such as ```Point``` and ```Bounds```, representing
 coordinates in the grid space.
 
-In addition, the application resurrects the old Prolog 'turtle' model, whereby a (real or virtual)
+In addition, the application resurrects the old [Logo 'turtle' model](https://www.calormen.com/jslogo/), whereby a (real or virtual)
 turtle robot responded to programmatic commands, such as 'forward', 'turn left', 'turn right', etc., 
 here represented by the ```Turtle``` trait.
 
