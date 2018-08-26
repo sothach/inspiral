@@ -1,4 +1,5 @@
 package inspiral.app
+import scala.annotation.tailrec
 
 trait State {
   def action(): State
@@ -99,7 +100,6 @@ case class MeasureDistance(console: ConsoleInOut, grid: GridBuilder) extends Inp
 }
 
 class InspiralRepl(console: ConsoleInOut) {
-  import scala.annotation.tailrec
 
   @tailrec
   private def inputLoop(next: State): State = next match {

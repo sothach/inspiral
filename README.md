@@ -1,5 +1,10 @@
 # Scala Console Program
+
+## Status
+[![Build Status](https://travis-ci.org/sothach/inspiral.png)](https://travis-ci.org/sothach/inspiral)
 [![Coverage Status](https://coveralls.io/repos/github/sothach/inspiral/badge.svg?branch=master)](https://coveralls.io/github/sothach/inspiral?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c7cb9c64809542c9be7fa257e175b046)](https://www.codacy.com/project/sothach/inspiral/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sothach/inspiral&amp;utm_campaign=Badge_Grade_Dashboard)
+
 ## Use Scala to build an interactive shell application
   
 This project is an example of using Scala to create an interactive command-line application.
